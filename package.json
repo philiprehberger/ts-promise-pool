@@ -1,5 +1,5 @@
 {
-  "name": "@philiprehberger/promise-pool",
+  "name": "@philiprehberger/ts-promise-pool",
   "version": "0.1.0",
   "description": "Concurrent promise execution with configurable pool size",
   "type": "module",
@@ -42,11 +42,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philiprehberger/promise-pool.git"
+    "url": "git+https://github.com/philiprehberger/ts-promise-pool.git"
   },
-  "homepage": "https://github.com/philiprehberger/promise-pool#readme",
+  "homepage": "https://github.com/philiprehberger/ts-promise-pool#readme",
   "bugs": {
-    "url": "https://github.com/philiprehberger/promise-pool/issues"
+    "url": "https://github.com/philiprehberger/ts-promise-pool/issues"
   },
   "author": "Philip Rehberger",
   "engines": {
