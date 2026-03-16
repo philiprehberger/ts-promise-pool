@@ -1,6 +1,6 @@
 {
   "name": "@philiprehberger/ts-promise-pool",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Concurrent promise execution with configurable pool size",
   "type": "module",
   "main": "./dist/index.cjs",
