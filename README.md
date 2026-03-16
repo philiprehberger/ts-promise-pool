@@ -1,6 +1,6 @@
 # @philiprehberger/ts-promise-pool
 
-[![CI](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/publish.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/ts-promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/ts-promise-pool)
 [![License](https://img.shields.io/github/license/philiprehberger/ts-promise-pool)](LICENSE)
 
@@ -73,6 +73,15 @@ const result4 = pool.run(() => fetch('/api/4')); // waits for a slot
 |----------|------|-------------|
 | `results` | `(T \| undefined)[]` | Results in original order (`undefined` for failed tasks) |
 | `errors` | `PoolError[]` | Array of `{ index, error }` for failed tasks |
+
+
+## Development
+
+```bash
+npm install
+npm run build
+npm test
+```
 
 ## License
 
