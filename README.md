@@ -1,5 +1,9 @@
 # @philiprehberger/promise-pool
 
+[![CI](https://github.com/philiprehberger/promise-pool/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/promise-pool/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@philiprehberger/promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/promise-pool)
+[![License](https://img.shields.io/github/license/philiprehberger/promise-pool)](LICENSE)
+
 Concurrent promise execution with configurable pool size.
 
 ## Installation
