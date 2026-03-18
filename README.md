@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/ts-promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/ts-promise-pool)
 [![License](https://img.shields.io/github/license/philiprehberger/ts-promise-pool)](LICENSE)
 
-Concurrent promise execution with configurable pool size.
+Concurrent promise execution with configurable pool size
 
 ## Installation
 
