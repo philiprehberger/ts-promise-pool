@@ -1,6 +1,6 @@
 # @philiprehberger/promise-pool
 
-[![CI](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/publish.yml)
+[![CI](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/promise-pool)
 [![License](https://img.shields.io/github/license/philiprehberger/ts-promise-pool)](LICENSE)
 
