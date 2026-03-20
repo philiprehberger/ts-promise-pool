@@ -1,7 +1,7 @@
-# @philiprehberger/ts-promise-pool
+# @philiprehberger/promise-pool
 
 [![CI](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/ts-promise-pool/actions/workflows/publish.yml)
-[![npm version](https://img.shields.io/npm/v/@philiprehberger/ts-promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/ts-promise-pool)
+[![npm version](https://img.shields.io/npm/v/@philiprehberger/promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/promise-pool)
 [![License](https://img.shields.io/github/license/philiprehberger/ts-promise-pool)](LICENSE)
 
 Concurrent promise execution with configurable pool size
@@ -9,7 +9,7 @@ Concurrent promise execution with configurable pool size
 ## Installation
 
 ```bash
-npm install @philiprehberger/ts-promise-pool
+npm install @philiprehberger/promise-pool
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ npm install @philiprehberger/ts-promise-pool
 ### Batch Execution
 
 ```ts
-import { promisePool } from '@philiprehberger/ts-promise-pool';
+import { promisePool } from '@philiprehberger/promise-pool';
 
 const tasks = urls.map(url => () => fetch(url).then(r => r.json()));
 
@@ -41,7 +41,7 @@ const { results, errors } = await promisePool(tasks, {
 ### Reusable Pool
 
 ```ts
-import { createPool } from '@philiprehberger/ts-promise-pool';
+import { createPool } from '@philiprehberger/promise-pool';
 
 const pool = createPool({ concurrency: 3 });
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- Standardize package configuration
+
 ## 0.1.4
 
 - Add Development section to README
