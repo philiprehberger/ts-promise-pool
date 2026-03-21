@@ -1,5 +1,5 @@
 {
-  "name": "@philiprehberger/ts-promise-pool",
+  "name": "@philiprehberger/promise-pool",
   "version": "0.1.5",
   "description": "Concurrent promise execution with configurable pool size",
   "type": "module",
