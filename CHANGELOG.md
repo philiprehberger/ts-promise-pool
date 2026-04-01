@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0
+
+- Add AbortSignal support for cancelling remaining tasks
+- Add per-task timeout with configurable duration
+- Add streaming results via forEachResult callback
+- Add task prioritization with numeric priority levels
+
 ## 0.1.7
 
 - Standardize README to 3-badge format with emoji Support section
