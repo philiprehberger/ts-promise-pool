@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Fix README GitHub URLs to use correct repo name (ts-promise-pool)
+
 ## 0.2.0
 
 - Add AbortSignal support for cancelling remaining tasks
