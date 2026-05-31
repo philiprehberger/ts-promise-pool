@@ -5,6 +5,7 @@ export interface PoolOptions {
   signal?: AbortSignal;
   taskTimeout?: number;
   onResult?: (result: TaskResult<unknown>) => void;
+  onError?: (error: PoolError) => void;
 }
 
 export interface PoolProgress {

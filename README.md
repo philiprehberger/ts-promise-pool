@@ -4,6 +4,8 @@
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/promise-pool.svg)](https://www.npmjs.com/package/@philiprehberger/promise-pool)
 [![Last updated](https://img.shields.io/github/last-commit/philiprehberger/ts-promise-pool)](https://github.com/philiprehberger/ts-promise-pool/commits/main)
 
+![@philiprehberger/promise-pool](https://raw.githubusercontent.com/philiprehberger/ts-promise-pool/main/package-card.webp)
+
 Concurrent promise execution with configurable pool size
 
 ## Installation
@@ -94,6 +96,23 @@ await promisePool(tasks, {
 });
 ```
 
+### Streaming Errors
+
+Receive errors the moment a task rejects, in addition to the aggregated `errors` array. Useful for logging, metrics, or early surface of failures while the pool keeps running:
+
+```ts
+import { promisePool } from '@philiprehberger/promise-pool';
+
+const { results, errors } = await promisePool(tasks, {
+  concurrency: 5,
+  onError: ({ index, error }) => {
+    console.error(`Task ${index} failed:`, error);
+  },
+});
+```
+
+`onError` is called synchronously the moment a task rejects, before any `stopOnError` handling. A throwing `onError` callback will not crash the pool.
+
 ### Task Prioritization
 
 Assign numeric priorities to tasks. Higher priority tasks are processed first:
@@ -144,6 +163,7 @@ const result4 = pool.run(() => fetch('/api/4')); // waits for a slot
 | `signal` | `AbortSignal` | — | Signal to cancel remaining tasks |
 | `taskTimeout` | `number` | — | Per-task timeout in milliseconds |
 | `onResult` | `(result: TaskResult) => void` | — | Callback invoked as each task completes |
+| `onError` | `(error: PoolError) => void` | — | Callback invoked synchronously when a task rejects, before `stopOnError` handling |
 
 ### `PoolResult<T>`
 

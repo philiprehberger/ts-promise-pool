@@ -36,6 +36,7 @@ export async function promisePool<T>(
     signal,
     taskTimeout,
     onResult,
+    onError,
   } = options;
 
   // Normalize tasks: support both plain function arrays and prioritized tasks
@@ -100,7 +101,17 @@ export async function promisePool<T>(
         emitResult({ index: entry.originalIndex, value, status: 'fulfilled' });
       } catch (error) {
         failed++;
-        errors.push({ index: entry.originalIndex, error });
+        const poolError: PoolError = { index: entry.originalIndex, error };
+        errors.push(poolError);
+
+        if (onError) {
+          try {
+            onError(poolError);
+          } catch {
+            // Swallow user callback errors so a throwing handler doesn't break the pool
+          }
+        }
+
         emitResult({ index: entry.originalIndex, error, status: 'rejected' });
 
         if (stopOnError) {

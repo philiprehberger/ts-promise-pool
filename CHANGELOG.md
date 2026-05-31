@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0
+
+- Add `onError` callback to `PoolOptions` for real-time error notifications as tasks fail (in addition to the aggregated `errors` array)
+- CI: publish workflow now runs `npm test` before publishing
+- README: add package card image
+
 ## 0.2.1
 
 - Fix README GitHub URLs to use correct repo name (ts-promise-pool)
